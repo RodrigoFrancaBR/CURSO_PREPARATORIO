@@ -84,4 +84,11 @@ public class UnidadeDeEnsino implements Serializable {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "UnidadeDeEnsino [id=" + id + ", nome=" + nome + ", endereco=" + endereco + ", status=" + status + "]";
+	}
+	
+	
+
 }

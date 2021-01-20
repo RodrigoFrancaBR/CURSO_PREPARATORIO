@@ -67,4 +67,11 @@ public class Turma {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "Turma [id=" + id + ", nome=" + nome + ", status=" + status + "]";
+	}
+	
+	
+
 }
