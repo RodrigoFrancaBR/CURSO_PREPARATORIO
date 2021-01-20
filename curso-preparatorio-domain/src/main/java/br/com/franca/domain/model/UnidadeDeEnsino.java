@@ -1,4 +1,6 @@
-package br.com.franca.domain;
+package br.com.franca.domain.model;
+
+import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,14 +10,21 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "tb_turma", uniqueConstraints = @UniqueConstraint(columnNames = { "nome" }, name = "nome_UK"))
-public class Turma {
+@Table(name = "tb_unidade", uniqueConstraints = @UniqueConstraint(
+		columnNames = { "nome","endereco" }, name = "nome_endereco_UK"))
+public class UnidadeDeEnsino implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5875337144608739087L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	private String nome;
+	private String endereco;
 	private String status;
 
 	public Long getId() {
@@ -32,6 +41,14 @@ public class Turma {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
 	public String getStatus() {
@@ -58,7 +75,7 @@ public class Turma {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Turma other = (Turma) obj;
+		UnidadeDeEnsino other = (UnidadeDeEnsino) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -69,7 +86,7 @@ public class Turma {
 
 	@Override
 	public String toString() {
-		return "Turma [id=" + id + ", nome=" + nome + ", status=" + status + "]";
+		return "UnidadeDeEnsino [id=" + id + ", nome=" + nome + ", endereco=" + endereco + ", status=" + status + "]";
 	}
 	
 	

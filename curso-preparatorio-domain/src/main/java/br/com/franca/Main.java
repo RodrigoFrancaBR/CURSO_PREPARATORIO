@@ -2,8 +2,8 @@ package br.com.franca;
 
 import javax.persistence.EntityManager;
 
-import br.com.franca.domain.Turma;
-import br.com.franca.domain.UnidadeDeEnsino;
+import br.com.franca.domain.model.Turma;
+import br.com.franca.domain.model.UnidadeDeEnsino;
 import br.com.franca.util.EntityManagerUtil;
 
 public class Main {
