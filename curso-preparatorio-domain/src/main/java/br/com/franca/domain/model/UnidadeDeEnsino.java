@@ -6,18 +6,22 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
 @Table(name = "tb_unidade", uniqueConstraints = @UniqueConstraint(
 		columnNames = { "nome","endereco" }, name = "nome_endereco_UK"))
+@NamedQuery(name = "findByStatus", query = "SELECT u FROM UnidadeDeEnsino u WHERE u.status = :status ORDER BY u.nome ASC")
 public class UnidadeDeEnsino implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -5875337144608739087L;
+
+	public static final String FIND_BY_STATUS = "findByStatus";
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -88,7 +92,5 @@ public class UnidadeDeEnsino implements Serializable {
 	public String toString() {
 		return "UnidadeDeEnsino [id=" + id + ", nome=" + nome + ", endereco=" + endereco + ", status=" + status + "]";
 	}
-	
-	
 
 }
