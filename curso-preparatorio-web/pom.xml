@@ -21,7 +21,7 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 			<scope>provided</scope>
-		</dependency>			
+		</dependency>
 
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
@@ -29,26 +29,33 @@
 			<artifactId>jersey-container-servlet</artifactId>
 			<version>2.23</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.jboss.weld.servlet/weld-servlet -->
 		<dependency>
 			<groupId>org.jboss.weld.servlet</groupId>
 			<artifactId>weld-servlet</artifactId>
 			<version>2.3.5.Final</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.glassfish.jersey.ext.cdi</groupId>
 			<artifactId>jersey-cdi1x</artifactId>
 			<version>2.23</version>
 		</dependency>
 
-		<dependency>
+<!-- 		<dependency>
 			<groupId>br.com.franca</groupId>
 			<artifactId>curso-preparatorio-domain</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<scope>provided</scope>
+			<scope>compile</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>br.com.franca</groupId>
+			<artifactId>curso-preparatorio-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency> -->
 
 	</dependencies>
 

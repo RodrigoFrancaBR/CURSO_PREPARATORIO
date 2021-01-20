@@ -11,7 +11,13 @@ import br.com.franca.domain.model.UnidadeDeEnsino;
 import br.com.franca.domain.service.UnidadeDeEnsinoService;
 import br.com.franca.util.EntityManagerUtil;
 
+// @Stateless sem sucesso 
 public class UnidadeDeEnsinoServiceBean implements UnidadeDeEnsinoService {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 344143774010672659L;
 
 	@Override
 	public Collection<UnidadeDeEnsino> findAllStatusEmAtividade() {
