@@ -11,9 +11,8 @@
 	</parent>
 
 	<name>Classes de servico</name>
-	<groupId>br.com.franca</groupId>
 	<artifactId>curso-preparatorio-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
 	<dependencies>
 
@@ -24,5 +23,8 @@
 		</dependency>
 
 	</dependencies>
+
+	<!-- <repositories> <repository> <id>local-maven-repo</id> <url>file:///${project.parent.basedir}/local-maven-repo</url> 
+		</repository> </repositories> -->
 
 </project>
